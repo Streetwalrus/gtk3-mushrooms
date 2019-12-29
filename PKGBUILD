@@ -8,7 +8,7 @@ __arch_pkg_commit="89cd85e778e9d797f97c66749e5f1d59889b7036"
 
 pkgname=gtk3-mushrooms
 pkgver=3.24.11
-pkgrel=1
+pkgrel=2
 pkgdesc="GTK3 patched for classic desktops like XFCE or MATE. Please see README."
 url="https://github.com/krumelmonster/gtk3-mushrooms"
 conflicts=(gtk3 gtk3-print-backends)
@@ -69,8 +69,8 @@ sha256sums=('68b26360764a2ea7e057a2aaa29c6fdfe164b9987866e038d8d0188a025477fb'
             'be4ddf03a5cce8270e8118eb331b3056972c0bd490faa6e4a4ebe332ec4c2e91'
             '81138fbaff82e37a83da1c4aa074a6c708e6c50340e0ddeff3fb70e2a0b52e1f'
             '515ff6df72934aa4294cdb1befd6c542a187fe3b4326cda68a8541dabbe657fd'
-            '63bf214d836f688e628b30d1743ff9e47deb64d0f4bde9f0eb9c352fc00ca8d4'
-            '1508ddc7e682cdaace327ffe2955abe90f903cf7ec923892b85673a37f76a32f'
+            'a95f5de37061ea53d0ca1ebd025c521686ee6b5f725e14280ba0e55799f10f7b'
+            'aab6047e6bae29eea6b982bf3ce7e69c075ce14e188740060da60589ace92334'
             '8271342e6a0394f70b6e5a21afb21e2e0b645edf39a0d149d5e8b4d6b062846d'
             '7b987cc9bd7ca9722bfb881b30b082c0d7409e3cd68592f5e7a1f401d73e7672'
             '99b12d7af7efc6a014e6afcab1ee82ea0feb0b5a4e9bbd663d1c45354cd34f2b'

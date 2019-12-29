@@ -1,16 +1,23 @@
 diff --color -U 5 -r -Z -B ./org/gtk/gtkwindow.c ./mod/gtk/gtkwindow.c
---- ./org/gtk/gtkwindow.c	2018-01-15 14:21:38.000000000 +0100
-+++ ./mod/gtk/gtkwindow.c	2018-05-30 01:00:23.948990000 +0200
-@@ -4100,10 +4100,12 @@
+--- ./org/gtk/gtkwindow.c	2019-09-03 21:53:07.000000000 +0300
++++ ./mod/gtk/gtkwindow.c	2019-12-29 16:29:21.159036758 +0200
+@@ -4106,10 +4106,18 @@
+   GdkVisual *visual;
+ 
+   screen = _gtk_window_get_screen (window);
    display = gdk_screen_get_display (screen);
-
+ 
++  gboolean is_gnome_wayland = g_strcmp0 (g_getenv ("DESKTOP_SESSION"), "gnome") == 0;
++#ifdef GDK_WINDOWING_X11
++  is_gnome_wayland = is_gnome_wayland && !GDK_IS_X11_DISPLAY (display);
++#endif
++
++  if (!is_gnome_wayland && g_strcmp0 (g_getenv ("GTK_CSD"), "1") != 0)
++    return FALSE;
++
  #ifdef GDK_WINDOWING_X11
    if (GDK_IS_X11_DISPLAY (display))
      {
-+      if (g_strcmp0 (g_getenv ("GTK_CSD"), "1") != 0)
-+        return FALSE;
        if (!gdk_screen_is_composited (screen))
          return FALSE;
-
-       if (!gdk_x11_screen_supports_net_wm_hint (screen, gdk_atom_intern_static_string ("_GTK_FRAME_EXTENTS")))
-         return FALSE;
+Only in ./mod/gtk: gtkwindow.c.orig

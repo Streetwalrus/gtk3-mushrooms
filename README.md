@@ -5,7 +5,7 @@ This is a set of patches for GTK3 library that makes it better for me and maybe 
 
 This package is based on official GTK3 package from Arch Linux. In my version library is compiled without documentation and example applications. Using this package with GNOME desktop is not recommended. It's for classic GTK-based environments like MATE or XFCE.
 
-Client Side Decorations (only on Xorg)
+Client Side Decorations (except for GNOME on Wayland)
 ---
 
 * CSDs are totally disabled by default. All windows are decorated only by window manager. You can enable CSDs by setting `GTK_CSD=0` environment variable (or `GTK_CSD=1` to force CSDs on each GTK3 window).
