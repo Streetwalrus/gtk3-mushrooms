@@ -8,7 +8,7 @@ __arch_pkg_commit="89cd85e778e9d797f97c66749e5f1d59889b7036"
 
 pkgname=gtk3-mushrooms
 pkgver=3.24.11
-pkgrel=2
+pkgrel=3
 pkgdesc="GTK3 patched for classic desktops like XFCE or MATE. Please see README."
 url="https://github.com/krumelmonster/gtk3-mushrooms"
 conflicts=(gtk3 gtk3-print-backends)
@@ -48,6 +48,7 @@ source=(
 	"other__default-settings.patch"
 	"other__hide-insert-emoji.patch"
 	"other__mnemonics-delay.patch"
+	"other__normalize-selection-to-lf.patch"
 	"popovers__color-chooser.patch"
 	"popovers__file-chooser-list.patch"
 	"popovers__places-sidebar.patch"
@@ -78,6 +79,7 @@ sha256sums=('68b26360764a2ea7e057a2aaa29c6fdfe164b9987866e038d8d0188a025477fb'
             '64379ca813321b5e8b603dc1557cbc72777031ecbcc1ad9dcc042768f51ae253'
             'acd3babd22add981690728e84a89fb8bb332b7ac746e9db7cdb27c47f1ac0042'
             'c213812e1fafeb5565f7e329c4501195f04adcfe377b88439a6d51d478edc071'
+            '6ec970bf60137a26f42b79927a5a5dbfb0ac04d58a76d695a8c1309f9a137be3'
             '7f3e5da1622e243243ea9b1e487460f608dc375e79d800d2f0d826fd30be68ed'
             'ef4fed3a364db8eb9c15c9ce0e733035722f168dc88b385df2178fc1168ada54'
             '2de68b575494d0d034accd7cd0ce881f366d5201a48496d8748c43f297836eac'
